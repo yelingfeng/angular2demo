@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2> hello Angular2! my name is {{message}}</h2><br/>
+            <p>
+                双向绑定:<input type="text" [(ngModel)]="message"/>
+            </p>
+            <table class="table">
+                <tr>
+                    <th>序号</th>
+                    <th>书名</th>
+                    <th>价格</th>
+                </tr>
+                <tr *ngFor="#book of books" (click)="lookInfo(book)">
+                    <td>{{book.id}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.price}}</td>
+                </tr>
+            </table>
+            <div class="alert alert-success">{{bookInfo}}</div>
+        </div>
+    </div>
+
+</div>
